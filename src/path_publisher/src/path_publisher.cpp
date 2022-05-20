@@ -44,7 +44,7 @@ void PathPublisher::path_state_callback(const std_msgs::Int8::ConstPtr& path_sta
 	
 	if(state == 0)		//done
 	{
-		std::cout << "state = 0  Task" << current_task_ << "is done!" << std::endl;
+		std::cout << "state = 0  Task  " << current_task_ << "  is done!" << std::endl;
 		
 		if (current_task_ == num_task_)
 		{
@@ -53,10 +53,11 @@ void PathPublisher::path_state_callback(const std_msgs::Int8::ConstPtr& path_sta
 		
 		if (!pubNextPath())
 		{
-			ROS_ERROR("[%s] compute next path failed!", __NAME__);
+			ROS_ERROR("[%s] publish next path failed!", __NAME__);
 		}
+		else
+		    ROS_INFO("[%s] New task is published", __NAME__);
 		
-		std::cout << "New task is sent!" << std::endl;
 	}
 	else if(state == 1)
 	{
@@ -99,7 +100,7 @@ bool PathPublisher::pubNextPath()
 		next_path.type = next_path.FILE_TYPE;
 		next_path.path_resolution = 0.1;
 		next_path.expect_speed = 15;
-		next_path.roadnet_file = all_path_[0];
+		next_path.roadnet_file = all_path_[1];
 		next_path.path_filp = false;
 	
 		path_file_name_pub_.publish(next_path);
@@ -111,8 +112,8 @@ bool PathPublisher::pubNextPath()
 		next_path.task = next_path.DRIVE_TASK;
 		next_path.type = next_path.FILE_TYPE;
 		next_path.path_resolution = 0.1;
-		next_path.expect_speed = 15;
-		next_path.roadnet_file = all_path_[1];
+		next_path.expect_speed = 5;
+		next_path.roadnet_file = all_path_[2];
 		next_path.path_filp = false;
 	
 		path_file_name_pub_.publish(next_path);
