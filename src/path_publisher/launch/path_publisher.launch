@@ -5,7 +5,10 @@
     <node pkg="path_publisher" type="path_publisher_node" name="path_publisher_node" output="screen">
     
     	<param name="state_topic" value = "/path_tracking_state"/>
-    	<param name="path_name_topic" value = "/road_file_name"/>
+    	<param name="path_topic" value = "/road_file_name"/>
+    	<param name="num_task" value="2"/>
+    	
+        <param name="task_list_file" value="/home/wzw/workspace/path_publisher_ws/src/path_publisher/src/task_list.txt"/> <!-- xxx.txt -->
         
     </node>
 
