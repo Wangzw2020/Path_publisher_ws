@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include "std_msgs/Int8.h"
 #include <path_msgs/path_msg.h>
+#include <obu_msgs/OBU_fusion.h>
 #include <fstream>
 #include <vector>
 
@@ -14,6 +15,7 @@ public:
     bool init(ros::NodeHandle nh, ros::NodeHandle nh_private);
 	
 	void path_state_callback(const std_msgs::Int8::ConstPtr& path_state);
+	void obu_callback(const obu_msgs::OBU_fusion::ConstPtr& container);
 	
 	bool loadAllPathFile();
 	bool pubNextPath();
@@ -33,4 +35,10 @@ private:
     
     int current_task_;
     int num_task_;
+    
+    int passenger_position_;
+    int move_pedestrian_position_;
+    int light_state_;
+    int destination_;
+    
 };

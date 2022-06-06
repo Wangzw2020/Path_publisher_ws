@@ -6,9 +6,15 @@
     
     	<param name="state_topic" value = "/path_tracking_state"/>
     	<param name="path_topic" value = "/road_file_name"/>
-    	<param name="num_task" value="3"/>
+    	<param name="num_task" value="4"/>
+    	<param name="current_task" value="0"/>
     	
-        <param name="task_list_file" value="/home/seu/projects/littleAnt_ws/src/path_publisher/src/path_list.txt"/> <!-- xxx.txt -->
+    	<param name="passenger_position" value="0"/>
+    	<param name="move_pedestrian_position" value="0"/>
+    	<param name="light_state" value="0"/>
+    	<param name="destination" value="0"/>
+    	
+        <param name="task_list_file" value="/home/wzw/workspace/path_publisher_ws/src/path_publisher/src/task_list.txt"/> <!-- xxx.txt -->
         
     </node>
 
