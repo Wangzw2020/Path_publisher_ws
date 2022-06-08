@@ -1,7 +1,9 @@
-/home/wzw/data/ant_path/WIDC_1_A.txt
-/home/wzw/data/ant_path/WIDC_2_A.txt
-/home/wzw/data/ant_path/WIDC_2_B.txt
-/home/wzw/data/ant_path/WIDC_3_A.txt
-/home/wzw/data/ant_path/WIDC_3_B.txt
-/home/wzw/data/ant_path/WIDC_4_A.txt
-/home/wzw/data/ant_path/WIDC_4_B.txt
+/home/seu/Desktop/path/WIDC_1_A.txt
+/home/seu/Desktop/path/WIDC_2_A.txt
+/home/seu/Desktop/path/WIDC_2_B.txt
+/home/seu/Desktop/path/WIDC_3_A.txt
+/home/seu/Desktop/path/WIDC_3_B.txt
+/home/seu/Desktop/path/WIDC_3_C.txt
+/home/seu/Desktop/path/WIDC_3_D.txt
+/home/seu/Desktop/path/WIDC_Final_1.txt
+/home/seu/Desktop/path/WIDC_Final_2.txt

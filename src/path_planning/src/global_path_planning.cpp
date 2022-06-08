@@ -46,19 +46,20 @@ bool GlobalPathPlanning::start()
 		return false;
 	}
 	
-	driverless_actions::DoDriverlessTaskGoal goal;
-	
-	goal.task = task_;
-	goal.type = type_;
-	
-	goal.path_resolution = path_resolution_;
-	goal.expect_speed = expect_speed_;
-	goal.roadnet_file = roadnet_file_;
-	goal.path_filp = path_filp_;
-	
-    ac_->sendGoal(goal, boost::bind(&GlobalPathPlanning::taskDoneCallback,this,_1,_2),
-                        boost::bind(&GlobalPathPlanning::taskActivedCallback,this),
-                        boost::bind(&GlobalPathPlanning::taskFeedbackCallback,this,_1));
+	ROS_INFO("[%s] wait for path msg!", __NAME__);
+//	driverless_actions::DoDriverlessTaskGoal goal;
+//	
+//	goal.task = task_;
+//	goal.type = type_;
+//	
+//	goal.path_resolution = path_resolution_;
+//	goal.expect_speed = expect_speed_;
+//	goal.roadnet_file = roadnet_file_;
+//	goal.path_filp = path_filp_;
+//	
+//    ac_->sendGoal(goal, boost::bind(&GlobalPathPlanning::taskDoneCallback,this,_1,_2),
+//                        boost::bind(&GlobalPathPlanning::taskActivedCallback,this),
+//                        boost::bind(&GlobalPathPlanning::taskFeedbackCallback,this,_1));
     
 }
 

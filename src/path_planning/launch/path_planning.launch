@@ -8,10 +8,11 @@
         
         <param name="path_resolution" value="0.1"/>
         <param name="expect_speed" value="10"/> <!-- km/h -->
-        <param name="roadnet_file" value="/home/seu/Desktop/path/0520_1.txt"/> <!-- xxx.txt -->
+        <param name="roadnet_file" value="/home/seu/Desktop/path/WIDC_1_A.txt"/> <!-- xxx.txt -->
         <param name="path_filp" value="false"/>
         
         <param name="state_topic" value = "/path_tracking_state"/>
-        <param name="path_name_topic" value = "/road_file_name"/>
+        <param name="path_name_topic" value = "/next_global_path"/>
+    </node>
 </launch>
 

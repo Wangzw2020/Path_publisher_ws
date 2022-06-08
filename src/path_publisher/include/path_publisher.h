@@ -27,11 +27,14 @@ private:
     std::string task_list_file_;
     std::vector<std::string> all_path_;
     
-    std::string state_topic_, path_topic_;
+    std::string state_topic_, path_topic_, obu_topic_;
     ros::Publisher path_file_name_pub_;
 	
 	ros::Subscriber path_state_sub_;
     std_msgs::Int8 path_tracking_state_;
+    
+    ros::Subscriber obu_sub_;
+    bool obu_ok_;
     
     int current_task_;
     int num_task_;
@@ -40,5 +43,6 @@ private:
     int move_pedestrian_position_;
     int light_state_;
     int destination_;
+    int delivery_end_point_;
     
 };

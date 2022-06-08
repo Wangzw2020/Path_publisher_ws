@@ -5,16 +5,18 @@
     <node pkg="path_publisher" type="path_publisher_node" name="path_publisher_node" output="screen">
     
     	<param name="state_topic" value = "/path_tracking_state"/>
-    	<param name="path_topic" value = "/road_file_name"/>
+    	<param name="path_topic" value = "/next_global_path"/>
+    	<param name="obu_topic" value = "/obu_info"/>
     	<param name="num_task" value="4"/>
     	<param name="current_task" value="0"/>
     	
-    	<param name="passenger_position" value="0"/>
-    	<param name="move_pedestrian_position" value="0"/>
-    	<param name="light_state" value="0"/>
-    	<param name="destination" value="0"/>
+    	<param name="passenger_position" value="-1"/>
+    	<param name="move_pedestrian_position" value="-1"/>
+    	<param name="light_state" value="-1"/>
+    	<param name="delivery_end_point" value="-1"/>
+    	<param name="destination" value="-1"/>
     	
-        <param name="task_list_file" value="/home/wzw/workspace/path_publisher_ws/src/path_publisher/src/task_list.txt"/> <!-- xxx.txt -->
+        <param name="task_list_file" value="/home/seu/Wangzw/path_publisher_ws/src/path_publisher/src/task_list.txt"/> <!-- xxx.txt -->
         
     </node>
 
